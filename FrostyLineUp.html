@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Line-Up</title>
+    <!-- Custom styles for this template -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="ExamStyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand ">
+                    <span class="logo">
+                        <strong>Stay </strong><span class="handwriting">Frosty!</span><br />
+                    </span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right visible-xs">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">FROST</a></li>
+                    <li><a href="#">FROST</a></li>
+                    <li><a href="#">FROST</a></li>
+                    <li><a href="#">FROST</a></li>
+                    <li><a href="#">Get Frosty</a></li>
+                </ul>
+                <div class="nav navbar-nav navbar-right hidden-xs">
+                    <div class="row">
+                        <div class="pull-right">
+                            <a data-toggle="modal" data-target="#modalLogin" href="#">FROST</a> |
+                            <a href="#">FROST</a> |
+                            <a href="#">FROST</a> |
+                            <a href="#">FROST</a>
+                            <a href="#" class="btn btn-default post-ad-btn">Get Frosty</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <hr class="topbar" />
+    <div class="container">
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Line-Up Creation Process</h1>
+                <hr />
+                <p>
+                    <ol>
+                        <!--<li>
+                            Wire up a click handler to the CREATE ADDRESS button such that the form can be submitted and the data is pulled from the
+                            form for processing.
+                        </li>-->
+                        <li>
+                            Wired up a click handler to the "Add to Line-up" button such that the form can be submitted and the data getss pulled from the
+                            form for processing.
+                        </li>
+                        <li>
+                            Created functions so that every time a new player is submitted through the pressig of the button, the data must be displayed below the form and below prior players.
+                            <ul>
+                                <li>
+                                    The fields that have drop downs have their text values displayed (i.e. Position should
+                                    show "CF" and not "1")
+                                </li>
+                                <li>
+                                    If the user does not fill in a section, they are asked to fill that section out via alert box.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            After a player is added to the line-up, the form is reset back to it's original state (i.e. All fields empty and the dropdown selectors
+                            should says "Please Select").
+                        </li>
+                        <li>
+                            The image to the left of the player shows the team's logo.
+                        </li>
+                        <li>
+                            Added a red delete button for each individual player added. When clicked, this button should remove only
+                            that one player from the list.
+                        </li>
+                        <li>
+                            When user clicks anywhere on a player in the Line-up, the form above is populated with the data of
+                            the given player. If user clicks somewhere else on page that is not form or player on line up, form
+                            is reset.
+                        </li>
+                        <li>
+                            If player on Line-Up is clicked, after clicking submit on the button (after you clicked on a player) the player in question is updated instead of
+                            creating adding to the line-up in the list.
+                        </li>
+                    </ol>
+                </p>
+                <div class="well">
+                    <p>
+                        Made sure to provide code with:
+                        <ul>
+                            <li>JavaScript Namespacing</li>
+                            <li>No inline functions unless absolutely required</li>
+                        </ul>
+                    </p>
+                    <p></p>
+                </div>
+                <hr />
+                <hr />
+                <form class="form-horizontal forma" id="formuLation">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nombreUno" class="form-control" id="fName" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nombreDos" class="form-control" id="lName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Jersey #</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="camisa" class="form-control" id="jersey" placeholder="Jersey Number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Position</label>
+                        <div class="col-sm-10">
+                            <!--<input type="password" class="form-control" id="position" >-->
+                            <select id="position" name="posission" class="form-control input-xlarge poss">
+                                <option value="" selected>Please Select</option>
+                                <option value="P">P</option>
+                                <option value="C">C</option>
+                                <option value="1B">1B</option>
+                                <option value="2B">2B</option>
+                                <option value="3B">3B</option>
+                                <option value="SS">SS</option>
+                                <option value="CF">CF</option>
+                                <option value="LF">LF</option>
+                                <option value="RF">RF</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Batting Style</label>
+                        <div class="col-sm-10">
+                            <select id="batStyle" name="batiando" class="form-control input-xlarge batt">
+                                <option value="" selected>Please Select</option>
+                                <option value="Left">Left</option>
+                                <option value="Right">Right</option>
+                                <option value="Switch">Switch</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" id="userFormSubmit" class="btn btn-primary">Add to Line-Up</button>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <div id="LineUp" class="col-md-6 col-sm-12 account-sidebar hidden-sm  listings">
+                    <!-- SINGLE ACCOUNT START -->
+                    <div class="row  listing-row" id="0">
+                        <div class="col-sm-2  thisIsIt" style="z-index: 3;">
+                            <a class="thumbnail"><img src="https://cdn0.globalgolf.com/images/team/59-logo.jpg" alt="176 * 120"></a>
+                        </div>
+                        <div class="col-sm-10  thisIsIt" style="z-index: 3;">
+                            <h3 class="user-name"><span class="pNombre">Roberto</span>&nbsp;<span class="sNombre">Clemente</span><strong>&nbsp;#<span class="acNumber">21</span></strong></h3>
+                            <p></p>
+                            <p>Position: <strong><span class="Position">RF</span></strong></p>
+                            <p>Batting Style: <strong><span class="batter">Right</span></strong></p>
+                        </div>
+                        <button class="delete">X</button>
+                    </div>
+                    <!-- SINGLE ACCOUNT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <p><strong>&copy; Bootstrap Classifieds 2014</strong></p>
+                    <p>All rights reserved</p>
+                </div>
+                <div class="col-sm-8 col-xs-12">
+                    <p class="footer-links">
+                        <a href="#" class="active">FROST</a>
+                        <a href="#">FROST</a>
+                        <a href="#">FROST</a>
+                        <a href="#">FROST</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://sabioapi2.azurewebsites.net/scripts/sabio.js"></script>
+    <!-- All your code goes below here-->
+    <script id="template" type="text/html">
+        <div class="row  listing-row" id="0">
+            <div class="col-sm-2  thisIsIt" style="z-index: 3;">
+                <a class="thumbnail"><img src="https://cdn0.globalgolf.com/images/team/59-logo.jpg" alt="176 * 120"></a>
+            </div>
+            <div class="col-sm-10  thisIsIt" style="z-index: 3;">
+                <h3 class="user-name"><span class="pNombre">Roberto</span>&nbsp;<span class="sNombre">Clemente</span><strong>&nbsp;#<span class="acNumber">21</span></strong></h3>
+                <p></p>
+                <p>Position: <strong><span class="Position">RF</span></strong></p>
+                <p>Batting Style: <strong><span class="batter">Right</span></strong></p>
+            </div>
+            <button class="delete">X</button>
+        </div>
+    </script>
+    <script type="text/javascript">
+        var total = "NOTPRESSED";
+        var counter = 1;
+        //-------------------------------------------------------------------------------------
+        //STARTUP
+        sabio.page.startUp = function () {                      //Main Function
+            console.log(" page is online.");
+            $(document).on('click', ".delete", sabio.page.handlers.deleter);
+            $(document).on('click', "#userFormSubmit", sabio.page.handlers.btnSubmit);
+            $(document).on('click', ".thisIsIt", sabio.page.handlers.infoDiv);
+            $(document).mouseup(sabio.page.handlers.cleanUp);
+        }
+        //--------------------------------------------------------------------------------------
+        //CLEANUP
+        sabio.page.handlers.cleanUp = function (event) {        //If player in line up clicked, if USER clicks
+            var container = $("#LineUp");                       //elsewhere on page, clears form from player info.
+            var otherCon = $("#formuLation");
+            if (!container.is(event.target) // if the target of the click isn't the div...
+                && (container.has(event.target).length === 0) && (total != "NOTPRESSED") && (!otherCon.is(event.target))
+                && (otherCon.has(event.target).length == 0)) // ... nor a descendant of the div
+            {
+                sabio.page.clearForm();
+                total = "NOTPRESSED";
+            }
+        }
+        //--------------------------------------------------------------------------------------
+        //LOADTEMPLATE
+        sabio.page.loadTemplate = function () {             //Lets jQuery manipulate DOM.
+            var stringTemplate = $("#template").html();
+            var domTemplate = $(stringTemplate);
+            return domTemplate;
+        }
+        //--------------------------------------------------------------------------------------
+        //CLEARFORM
+        sabio.page.clearForm = function () {                //Resets Form.
+            $('form')[0].reset();
+        }
+        //--------------------------------------------------------------------------------------
+        //READFORM
+        sabio.page.readForm = function () {                //Reads all USER input from form and returns object for later access to USER input.
+            var nameOne = $('#fName').val();
+            var nameTwo = $('#lName').val();
+            var jNum = $('#jersey').val();
+            var pos = $('#position option:selected').text();
+            var batS = $('#batStyle option:selected').text();
+            var newComment = {
+                firstName: nameOne,
+                secondName: nameTwo,
+                jerseyNum: jNum,
+                playPosition: pos,
+                batSide: batS
+            };
+            return newComment;
+        }
+        //--------------------------------------------------------------------------------------
+        //ADDFORM
+        sabio.page.addForm = function (data) {                    //Customizes template and appends it to #LineUp div under last player.
+            var temp = sabio.page.loadTemplate();
+            temp.find(".user-name .pNombre").text(data.firstName);
+            $(".user-name .sNombre", temp).text(data.secondName);
+            $(".user-name .acNumber", temp).text(data.jerseyNum);
+            $(".Position", temp).text(data.playPosition);
+            $(".batter", temp).text(data.batSide);
+            temp.attr("id", counter);
+            counter++;
+            $('#LineUp').append(temp);
+        }
+        //--------------------------------------------------------------------------------------
+        //CHANGEDIV
+        sabio.page.changeDiv = function (data) {                       //Reads USER input from form and returns object to be used
+            var temp = sabio.page.loadTemplate();                      //later when updating player info in LineUp.
+            temp.find(".user-name .pNombre").text(data.firstName);
+            $(".user-name .sNombre", temp).text(data.secondName);
+            $(".user-name .acNumber", temp).text(data.jerseyNum);
+            $(".Position", temp).text(data.playPosition);
+            $(".batter", temp).text(data.batSide);
+            temp.attr("id", total);
+            return temp;
+        }
+        //--------------------------------------------------------------------------------------
+        //DELETER
+        sabio.page.handlers.deleter = function (event) {               //Removes player from LineUp if the red X button is pressed.
+            $(this).parent().remove();
+            sabio.page.clearForm();
+            total = "NOTPRESSED";
+        }
+        //--------------------------------------------------------------------------------------
+        //INFODIV
+        sabio.page.handlers.infoDiv = function (event) {                                    //This grabs info from player that is pressed and
+            $('.forma input[name="nombreUno"]').val($(this).find("h3 .pNombre").text());    //fills in form with info. Also sets "total" var
+            $('.forma input[name="nombreDos"]').val($(this).find("h3 .sNombre").text());    //to id of player div.
+            $('.forma input[name="camisa"]').val($(this).find("h3 .acNumber").text());
+            $('.poss').val($(this).find("p .Position").text());
+            $('.batt').val($(this).find("p .batter").text());
+            total = $(this).parent().attr("id");
+        }
+        //--------------------------------------------------------------------------------------
+        //CHECKEMPTY
+        sabio.page.checkEmpty = function () {                   //Checks if form subject is empty and returns a string accordingly.
+            var data = sabio.page.readForm();
+
+            if (data.firstName == "") {
+                return "Please Enter A First Name";
+            }
+            else if (data.secondName == "") {
+                return "Please Enter A Second Name";
+            }
+            else if (data.jerseyNum == "") {
+                return "Please Enter A Jersey Number";
+            }
+            else if (data.playPosition == "Please Select") {
+                return "Please Select A Position";
+            }
+            else if (data.batSide == "Please Select") {
+                return "Please Select A Batting Style";
+            }
+            else {
+                return "APPROVED";
+            }
+        }
+        //--------------------------------------------------------------------------------------
+        //BTNSUBMIT
+        sabio.page.handlers.btnSubmit = function (event) {      //Submit button controller. If form has empty input lines, asks user to
+            event.preventDefault();                             //fill them in. Uses checkEmpty string.
+            var data = sabio.page.readForm();
+            var checker = sabio.page.checkEmpty();
+            if (checker != "APPROVED") {
+                alert(checker);
+            }
+            else if ((data.playPosition != "Please Select") && (total != "NOTPRESSED")) {       //Checks if player div was pressed, and if so it
+                $('#' + total).replaceWith(sabio.page.changeDiv(data));                         //replaces it with updated version of player.
+                total = "NOTPRESSED";
+                sabio.page.clearForm();
+            }
+            else if ((data.playPosition != "Please Select") && (total == "NOTPRESSED")){
+                sabio.page.addForm(data);                                                   //If function gets this far, it just appends a new
+                sabio.page.clearForm();                                                     //player to the #LineUp div.
+            }
+        }
+    </script>
+</body>
+</html>
